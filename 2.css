@@ -1,0 +1,42 @@
+.button-container {
+    display: flex;
+  }
+  
+  .button {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border: 2px solid #FF5733; /* Default border color */
+    border-right-color: #FFFFFF; /* Default right border color */
+    border-bottom-color: #FFFFFF; /* Default bottom border color */
+    border-right: 6px;
+    cursor: pointer;
+    position: relative;
+    background-color: #FF5733;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 40px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-left: none;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    opacity: 0;
+  }
+  
+  .button.selected::before {
+    opacity: 1;
+  }
+  
+  .button.selected {
+    background-color: #DAF7A6; /* Selected background color */
+    border-color: #7FB3D5; /* Selected border color */
+    border-right-color: #FFFFFF; /* Selected right border color */
+    border-bottom-color: #FFFFFF; /* Selected bottom border color */
+  }
+  
